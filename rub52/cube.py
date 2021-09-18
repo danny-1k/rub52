@@ -273,17 +273,17 @@ class Cube:
                 pos4 = self.cube[-1].cubies[idx].pos  # y pos
                 color4 = self.cube[-1].cubies[idx].color  # y
 
-                cubie.color = pos2
-                cubie.pos = color2
+                cubie.color = pos3
+                cubie.pos = color3
 
-                self.cube[3].cubies[idx].pos = pos1
-                self.cube[3].cubies[idx].color = color1
+                self.cube[3].cubies[idx].pos = pos4
+                self.cube[3].cubies[idx].color = color4
 
-                self.cube[-1].cubies[idx].pos = pos3
-                self.cube[-1].cubies[idx].color = color3
+                self.cube[-1].cubies[idx].pos = pos2
+                self.cube[-1].cubies[idx].color = color2
 
-                self.cube[2].cubies[idx].pos = pos4
-                self.cube[2].cubies[idx].color = color4
+                self.cube[2].cubies[idx].pos = pos1
+                self.cube[2].cubies[idx].color = color1
 
         # rotate red face clock-wise
         self.cube[1].clock_wise_turn()
