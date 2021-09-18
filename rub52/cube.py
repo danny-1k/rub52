@@ -43,6 +43,10 @@ class Cube:
 
         self.cube[-2].clock_wise_turn()  # rotate white face clock-wise
 
+    def F2(self):
+        self.F()
+        self.F()
+
     def F_(self):
         # F_ turns the front face counter-clock-wise
         # the faces we're gonna alter
@@ -112,6 +116,10 @@ class Cube:
 
         # rotate yellow face counter-clock-wise
         self.cube[-1].clock_wise_turn()
+
+    def B2(self):
+        self.B()
+        self.B()
 
     def B_(self):
         # B_ turns the back face counter-clock-wise
@@ -183,6 +191,10 @@ class Cube:
         # rotate orange face counter-clock-wise
         self.cube[0].counter_clock_wise_turn()
 
+    def U2(self):
+        self.U()
+        self.U()
+
     def U_(self):
         # U_ turns the right face counter-clock-wise
         # the faces we're gonna alter
@@ -253,6 +265,10 @@ class Cube:
         # rotate red face counter-clock-wise
         self.cube[1].counter_clock_wise_turn()
 
+    def D2(self):
+        self.D()
+        self.D()
+
     def D_(self):
         # D_ turns the down face counter-clock-wise
         # the faces we're gonna alter
@@ -289,7 +305,7 @@ class Cube:
         self.cube[1].clock_wise_turn()
 
     def R(self):
-        # R_ turns the right face clock-wise
+        # R turns the right face clock-wise
         # the faces we're gonna alter
         # back,bottom,front,right,top
 
@@ -321,6 +337,10 @@ class Cube:
                 self.cube[-1].cubies[idx].color = color3
 
         self.cube[-3].clock_wise_turn()  # rotate blue face clock-wise
+
+    def R2(self):
+        self.R()
+        self.R()
 
     def R_(self):
         # R turns the right face counter-clock-wise
@@ -391,6 +411,10 @@ class Cube:
 
         # rotate green face counter-clock-wise
         self.cube[2].counter_clock_wise_turn()
+
+    def L2(self):
+        self.L()
+        self.L()
 
     def L_(self):
         # L_ turns the left face counter-clock-wise
