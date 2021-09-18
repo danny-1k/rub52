@@ -34,3 +34,7 @@ print(cube)
 #
 #
 ```
+
+## TODO
+
+- [ ] Graphics & 3d (Next 10^256 years)
