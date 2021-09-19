@@ -12,7 +12,6 @@ class Cube:
     def is_solved(self):
         score = 0
         for i in self.cube:
-            print([c.color for c in i.cubies])
             score += len(set([c.color for c in i.cubies]))
 
         return score == len(self.colors)
