@@ -1,4 +1,5 @@
 from .face import Face
+import random
 
 
 class Cube:
@@ -15,6 +16,21 @@ class Cube:
             score += len(set([c.color for c in i.cubies]))
 
         return score == len(self.colors)
+
+    def scramble(self,steps=20,seed=None):
+        if seed:
+            random.seed(seed)
+        
+        for i in range(steps):
+            funcs = [lambda:self.F(),lambda:self.F_(),lambda:self.F2(),
+                    lambda:self.B(),lambda:self.B_(),lambda:self.B2(),
+                    lambda:self.U(),lambda:self.U_(),lambda:self.U2(),
+                    lambda:self.D(),lambda:self.D_(),lambda:self.D2(),
+                    lambda:self.L(),lambda:self.L_(),lambda:self.L2(),
+                    lambda:self.R(),lambda:self.R_(),lambda:self.R2(),
+            ]
+
+            random.choice(funcs)()
 
     def F(self):
         # F turns the front face clock-wise
