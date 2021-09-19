@@ -9,10 +9,10 @@ class Cube:
 
         self.cube = [Face(size[0], size[1], c) for c in self.colors]
 
-
     def is_solved(self):
         score = 0
         for i in self.cube:
+            print([c.color for c in i.cubies])
             score += len(set([c.color for c in i.cubies]))
 
         return score == len(self.colors)
@@ -184,8 +184,8 @@ class Cube:
                 pos4 = self.cube[-1].cubies[idx].pos  # y pos
                 color4 = self.cube[-1].cubies[idx].color  # y
 
-                cubie.color = pos3
-                cubie.pos = color3
+                cubie.color = color3
+                cubie.pos = pos3
 
                 self.cube[3].cubies[idx].pos = pos4
                 self.cube[3].cubies[idx].color = color4
@@ -223,8 +223,8 @@ class Cube:
                 pos4 = self.cube[-1].cubies[idx].pos  # y pos
                 color4 = self.cube[-1].cubies[idx].color  # y
 
-                cubie.color = pos2
-                cubie.pos = color2
+                cubie.color = color2
+                cubie.pos = pos2
 
                 self.cube[3].cubies[idx].pos = pos1
                 self.cube[3].cubies[idx].color = color1
@@ -258,8 +258,8 @@ class Cube:
                 pos4 = self.cube[-1].cubies[idx].pos  # y pos
                 color4 = self.cube[-1].cubies[idx].color  # y
 
-                cubie.color = pos2
-                cubie.pos = color2
+                cubie.color = color2
+                cubie.pos = pos2
 
                 self.cube[3].cubies[idx].pos = pos1
                 self.cube[3].cubies[idx].color = color1
@@ -297,8 +297,8 @@ class Cube:
                 pos4 = self.cube[-1].cubies[idx].pos  # y pos
                 color4 = self.cube[-1].cubies[idx].color  # y
 
-                cubie.color = pos3
-                cubie.pos = color3
+                cubie.color = color3
+                cubie.pos = pos3
 
                 self.cube[3].cubies[idx].pos = pos4
                 self.cube[3].cubies[idx].color = color4
