@@ -9,6 +9,14 @@ class Cube:
 
         self.cube = [Face(size[0], size[1], c) for c in self.colors]
 
+
+    def is_solved(self):
+        score = 0
+        for i in self.cube:
+            score += len(set([c.color for c in i.cubies]))
+
+        return score == len(self.colors)
+
     def F(self):
         # F turns the front face clock-wise
         # the faces we're gonna alter
