@@ -56,6 +56,11 @@ print(cube)
 # |y [2, 0]| |w [1, 0]| |w [0, 0]|
 ```
 
+You can scramble a cube:
+```python
+#--SNIP--
+cube.scramble(steps=34,seed=0)
+```
 ## TODO
 
 - [ ] Graphics & 3d (Next 10^256 years)
